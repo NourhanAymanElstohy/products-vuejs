@@ -37,6 +37,15 @@
                     type="number"
                     placeholder="Price"
                 ></b-form-input>
+                <p
+                    v-show="getValidationMessages.price"
+                    v-for="msg in getValidationMessages.price"
+                    :key="msg"
+                    class="text-danger"
+                    style="list-style-type: none"
+                >
+                    {{ msg }}
+                </p>
             </b-form-group>
             <b-form-group
                 id="input-group-2"
@@ -51,6 +60,15 @@
                     required
                     placeholder="Description"
                 ></b-form-textarea>
+                <p
+                    v-show="getValidationMessages.description"
+                    v-for="msg in getValidationMessages.description"
+                    :key="msg"
+                    class="text-danger"
+                    style="list-style-type: none"
+                >
+                    {{ msg }}
+                </p>
             </b-form-group>
             <b-form-group 
                 id="input-group-image"
@@ -66,6 +84,15 @@
                     accept="image/png, image/jpeg, image/bmp"
                     :loading="true"
                 ></b-form-file>
+                <p
+                    v-show="getValidationMessages.image"
+                    v-for="msg in getValidationMessages.image"
+                    :key="msg"
+                    class="text-danger"
+                    style="list-style-type: none"
+                >
+                    {{ msg }}
+                </p>
             </b-form-group>
             <div class="form-row">
               <div class="col-lg-2 col-form-label"></div>

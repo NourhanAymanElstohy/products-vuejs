@@ -89,6 +89,15 @@
                         accept="image/png, image/jpeg, image/bmp"
                         :loading="true"
                     ></b-form-file>
+                    <p
+                        v-show="getValidationMessages.image"
+                        v-for="msg in getValidationMessages.image"
+                        :key="msg"
+                        class="text-danger"
+                        style="list-style-type: none"
+                    >
+                        {{ msg }}
+                    </p>
                 </div>
             </b-form-group>
             <div class="form-row">
