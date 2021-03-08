@@ -36,7 +36,6 @@
                     ref="price"
                     :value="product.price"
                     required
-                    type="number"
                     placeholder="Price"
                 ></b-form-input>
                 <p
@@ -87,6 +86,7 @@
                         v-model="image"
                         :rules="rules"
                         accept="image/png, image/jpeg, image/bmp"
+                        required
                         :loading="true"
                     ></b-form-file>
                     <p

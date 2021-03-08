@@ -34,7 +34,6 @@
                 <b-form-input
                     v-model="form.price"
                     required
-                    type="number"
                     placeholder="Price"
                 ></b-form-input>
                 <p
@@ -83,6 +82,7 @@
                     :rules="rules"
                     accept="image/png, image/jpeg, image/bmp"
                     :loading="true"
+                    required
                 ></b-form-file>
                 <p
                     v-show="getValidationMessages.image"
@@ -119,7 +119,7 @@ export default {
         return {
             form: {
                 title: "",
-                price: 0,
+                price: "",
                 description:"",
                 image: null,
             },

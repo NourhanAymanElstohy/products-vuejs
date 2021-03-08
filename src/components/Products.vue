@@ -35,7 +35,7 @@
                             <td>{{ product.id }}</td>
                             <td>{{ product.title }}</td>
                             <td>{{ product.description.substr(0, 25) }}...</td>
-                            <td>{{ product.price }}</td>
+                            <td>{{ product.price }}$</td>
                             <td class="text-center">
                                 <img :src="'http://127.0.0.1:8000'+product.image" alt="" srcset="" width="50" height="50">
                             </td>   
@@ -127,7 +127,7 @@ export default {
     },
     deleteProduct(id) {
       Swal.fire({
-            title: 'Are you sure you want to delete this Product?',
+            title: 'Are you sure you want to delete this product?',
             showDenyButton: true,
             showCancelButton: true,
             showConfirmButton: false,
